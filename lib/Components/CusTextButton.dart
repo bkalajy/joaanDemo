@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../Resources/app_resources.dart';
 
 class CusTextButton extends StatefulWidget {
   final String txt;

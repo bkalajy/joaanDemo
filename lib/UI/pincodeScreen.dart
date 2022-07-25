@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:joaan_demo/UI/mainScreen.dart';
 import 'package:pinput/pinput.dart';
 
 import 'package:joaan_demo/Components/CusOutlinedButton.dart';
@@ -98,7 +99,7 @@ class _PinScreenState extends State<PinScreen> {
 
                         Center(
                           child: CusTextButton(
-                              txt: 'Didn\u0027t recieve a code ?',
+                              txt: 'Didn\'t recieve a code ?',
                               color: AppColors.scarlet,
                               size: 18),
                         )
@@ -156,7 +157,7 @@ class _PinScreenState extends State<PinScreen> {
   void navigateToNextScreen() {
     unfocus(context);
     Navigator.of(context)
-        .push(MaterialPageRoute(builder: (context) => const PhoneScreen()));
+        .push(MaterialPageRoute(builder: (context) => const MainScreen()));
   }
 
   Widget buildHeader() {
