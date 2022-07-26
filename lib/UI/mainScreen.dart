@@ -197,26 +197,21 @@ class _MainScreenState extends State<MainScreen> {
               ),
             ),
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              SizedBox(
-                height: 240,
-                width: double.infinity,
-                child: Carousel(
-                  widgets: [
-                    carouselItem(),
-                    carouselItem(),
-                    carouselItem(),
-                  ],
-                  initialPage: 2,
-                  fractions: 1.0,
-                  indicatorState: true,
-                  height: 200,
-                  margin: 4,
-                ),
-              ),
-            ],
+          SizedBox(
+            height: 240,
+            width: double.infinity,
+            child: Carousel(
+              widgets: [
+                carouselItem(),
+                carouselItem(),
+                carouselItem(),
+              ],
+              initialPage: 2,
+              fractions: 1.0,
+              indicatorState: true,
+              height: 200,
+              margin: 4,
+            ),
           ),
         ],
       ),
@@ -225,7 +220,7 @@ class _MainScreenState extends State<MainScreen> {
 
   Widget carouselItem() {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -250,7 +245,7 @@ class _MainScreenState extends State<MainScreen> {
           ],
         ),
         Container(
-            margin: EdgeInsets.all(10),
+            margin: const EdgeInsets.all(12),
             child: Image.asset(
               'assets/Images/Page 4/bag.png',
             )),

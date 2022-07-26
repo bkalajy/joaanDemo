@@ -59,7 +59,9 @@ class _CarouselState extends State<Carousel> {
               }),
         ),
         if (widget.indicatorState)
-          buildIndicator(widget.widgets.length, activePage)
+          SizedBox(
+              height: widget.height * 0.20,
+              child: buildIndicator(widget.widgets.length, activePage))
       ],
     );
   }
